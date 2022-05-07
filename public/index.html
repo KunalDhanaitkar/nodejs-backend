@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/e382d7d3c7.js" crossorigin="anonymous"></script>
+    <title>Kunal's Portfolio</title>
+
+    <style>
+          .first {
+            color: rgb(255, 255, 255);
+          }
+          body {
+            margin: 0;
+          }
+          .container {
+            background-color: #ffffff;
+            width: 100%;
+          }
+          .inner-container {
+            margin: 0 auto;
+            padding-bottom: 15px;
+            background-color: #ffffff;
+          }
+          header {
+            width: 100%;
+            background-color: #e27d60;
+            color: white;
+            height: 55px;
+            position: sticky;
+            font-size: 25px;
+            font-weight: 500;
+          }
+          .header-section {
+            height: 100%;
+          }
+
+          .hamburger-menu {
+            display: none;
+            align-items: center;
+          }
+
+          .nav-bar {
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #e8a87c;
+            background-color: #edf5e1;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+          }
+          .nav-content {
+            text-decoration: none;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+          }
+          .main-content {
+            margin-top: 2px;
+          }
+          .notifier {
+            height: 40px;
+          }
+          .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+          }
+          .card {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background-color: white;
+          }
+
+          .vertical-center {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .title-card {
+            background: #85dcb8;
+            color: #fff;
+          }
+          .mt-10 {
+            margin-top: 2px;
+            font-size: medium;
+          }
+          .pd-10 {
+            padding: 10px;
+          }
+          .ht-60 {
+            height: 60px;
+          }
+          .bb {
+            border-bottom: 1px solid #968484;
+          }
+          .abt-img {
+            width: 100%;
+          }
+          .rounded-img {
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+          }
+          .pd-5-10 {
+            padding: 5px 0px 0px 5px;
+            background-color: beige;
+          }
+          .pd-r-l-10 {
+            padding: 15px;
+            background-color: beige;
+          }
+
+          .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 5px 10px;
+          }
+          .m-t-b-5 {
+            margin: 5px 10px;
+          }
+          .ham-btn {
+            background: transparent;
+            border: none;
+            color: #fff;
+          }
+          .vertical-line {
+            height: 90px;
+            position: relative;
+            padding-left: 5px;
+            border-right: 2px solid gray;
+          }
+          .horizontal-line {
+            height: 1px;
+            border-top: 1px solid grey;
+          }
+          .card-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: #edf5e1;
+          }
+          .card-content1 {
+            width: 100%;
+            padding: 5px;
+            background-color: #edf5e1;
+          }
+          .left-content {
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+            align-items: center;
+            background-color: #edf5e1;
+          }
+          .header-title {
+            height: 100%;
+            text-align: center;
+          }
+          .horizontal-center {
+            justify-content: center;
+            align-items: center;
+          }
+          .material-icons.md-36 {
+            font-size: 36px;
+          }
+
+          .inline-icon {
+            position: relative;
+            top: 6px;
+          }
+          .contact-details {
+            width: 80%;
+            justify-content: center;
+          }
+          .contact-card {
+            height: 110px;
+            background-color: #e27d60;
+          }
+          .card-sub-title {
+            padding-left: 10px;
+          }
+          .content-card {
+            display: flex;
+            align-items: center;
+            min-height: 100px;
+          }
+          .grid1{
+            padding: 5px;
+            display: grid;
+            height: 105px;
+            grid-template-columns: 0.8fr 0.8fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "content1 content2";
+            grid-gap: 0.4rem;
+            text-align: center;
+            font-style: italic;
+            font-size: large;
+          }
+          .grid2{
+            padding: 5px;
+            display: grid;
+            height: auto;
+            grid-template-columns: 0.8fr 0.8fr 0.8fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "content1 content2 content3";
+            grid-gap: 0.5rem;
+            text-align: center;
+            font-style: italic;
+            font-size: large;
+          }
+          .grid3{
+            padding: 5px 10px;
+            display: grid;
+            height: auto;
+            grid-template-columns: 0.8fr 0.8fr 0.8fr;
+            grid-template-rows: 0.8fr;
+            grid-template-areas: 
+            "content1 content2 content3";
+            grid-gap: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-size: large;
+          }
+          .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .fa-bars{
+            color: #fff;
+            background: #85dcb8;
+            text-align: center;
+            padding: 0 0;
+          }
+          .fa-solid {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .fa-brands {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+          }
+
+          ul {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+          }
+          li {
+            display: inline-block;
+            padding: 0px 40px;
+          }
+          li a {
+            min-width:140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            text-decoration: none;
+            justify-content: center;
+          }
+
+          .show-menu {
+            text-decoration: none;
+            color: #fff;
+            background: #85dcb8;
+            text-align: center;
+            padding: 10px 0;
+            display: none;
+          }
+          input[type=checkbox]{
+            display: none;
+          }
+          input[type=checkbox]:checked ~ #menu{
+            display: block;
+          }
+
+          @media only screen and (max-width:500px){
+            .grid1{
+                background-color: #fff;
+                grid-template-areas: 
+                " content1 "
+                " content2 "
+                ;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 0.5fr;
+            }
+
+            .grid2{
+              background-color: #fff;
+                grid-template-areas: 
+                " content1 "
+                " content2 "
+                " content3 "
+                ;
+                grid-template-columns: 1fr;
+            }
+
+            .grid3{
+              background-color: #fff;
+                grid-template-areas: 
+                " content1 "
+                " content2 "
+                " content3 "
+                ;
+                grid-template-columns: 1fr;
+            }
+
+            .show-menu {
+              display:block;
+            }
+            ul {
+              position:sticky;
+              display: none;
+            }
+            li {
+              margin-bottom: 1px;
+            }
+            ul li, li a {
+              width: 100%;
+            }
+
+            #experience{
+                padding-top: 25%;
+            }
+          }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <div>
+          <header>
+            <div class="horizontal-center header-section row">
+              <div class="nav-menu hamburger-menu"></div>
+                <div class="vertical-center header-title"><span>KUNAL DHANAITKAR</span></div>
+            </div>
+          </header>
+        </div>
+        <div>
+          <div class="nav-section">
+            <div id="nav">
+              <nav class="nav-bar">
+                <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+                <input type="checkbox" id="show-menu" role="button">
+                  <ul id="menu">
+                    <li><a class="nav-content" href="#overview">OVERVIEW</a>
+                    <li><a class="nav-content" href="#education">EDUCATION</a>
+                    <li><a class="nav-content" href="#experience">EXPERIENCE</a>
+                    <li><a class="nav-content" href="#projects">ACADMEDIC PROJECTS</a>
+                    <li><a class="nav-content" href="#skills">SKILLS</a>
+                    <li><a class="nav-content" href="#contact">CONTACT ME</a>
+                  </ul>
+              </nav>
+            </div>
+          </div>
+
+          <main>
+            <div class="main-content">
+              <div id="overview" class="notifier">
+                <div class="card vertical-center title-card">
+                  <span class="card-title"> OVERVIEW </span>
+                </div>
+              </div>
+              <div class="about-me">
+                <section class="about-me-section">
+                  <div class="card">
+                    <div class="column bb">
+                      <div class="row ht-60 pd-5-10">
+                        <div>
+                          <img
+                            class="rounded-img"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                            alt="profile pic"
+                          />
+                        </div>
+                        <div class="column justify-center">
+                          <div class="card-title"><u>ABOUT ME</u></div>
+                          <div class="card-sub-title">Software Developer</div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="pd-r-l-10">
+                          Detail-oriented, Energetic and Inquisitive Computer Science Graduate Student
+                          with a Master of Science in Computer Science. Aiming to leverage 
+                          my academic experience and proven knowledge of application development, web platform development, and problem-solving to become 
+                          a successful professional in the field of Information Technology.  
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <img
+                          class="abt-img"
+                          src="https://marvel-b1-cdn.bc0a.com/f00000000257779/www.newhaven.edu/_resources/images/hero/winter-intersession.jpg"
+                          alt="profile photo"
+                        />
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div id="education" class="notifier mt-10">
+                <div class="card vertical-center title-card">
+                  <span class="card-title"> EDUCATION </span>
+                </div>
+              </div>
+
+              <div class="grid1">
+                            
+                <div id="content1">
+                  <div class="education mt-10">
+                    <section class="education-section">
+                      <div class="card content-card">
+                        <div class="row">
+                          <div class="left-content">
+                            <div>
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/en/5/55/University_of_New_Haven_seal.png"
+                                height="100px"
+                                width="100px"
+                                alt="UNH"
+                              />
+                            </div>
+                            <div class="vertical-line"></div>
+                          </div>
+                          <div class="card-content">
+                            <div class="row card-content">
+                              <div>
+                                <div class="column">
+                                  <div><strong><u>UNIVERSITY OF NEW HAVEN, U.S</u></strong></div>
+                                  <div>MASTER OF SCIENCE</div>
+                                  <div>COMPUTER SCIENCE</div>
+                                </div>
+                              </div>
+                              <div>
+                                August 2020 - Present
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+        
+                <div id="content2">
+                  <div class="card content-card mt-10">
+                    <div class="row">
+                      <div class="left-content">
+                        <div>
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/en/c/c4/Rajiv_Gandhi_Proudyogiki_Vishwavidyalaya_logo.png"
+                            height="100px"
+                            width="100px"
+                            alt="RGPV"
+                          />
+                        </div>
+                        <div class="vertical-line"></div>
+                      </div>
+                      <div class="card-content">
+                        <div class="row card-content">
+                          <div>
+                            <div class="column">
+                              <div><strong><u>RGPV UNIVERSITY, INDIA</strong></u></div>
+                              <div>BACHELOR OF ENGINEERING</div>
+                              <div>INFORMATION TECHNOLOGY</div>
+                            </div>
+                          </div>
+                          <div>
+                            August 2015 - May 2019
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+    
+
+              <div id="experience" class="notifier mt-10">
+                <div class="card vertical-center title-card">
+                  <span class="card-title"> EXPERIENCE </span>
+                </div>
+              </div>
+
+              <div class="experience mt-10">
+                <section class="experience-section">
+                  <div class="card content-card">
+                    <div class="row">
+                      <div class="left-content">
+                        <div>
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/en/5/55/University_of_New_Haven_seal.png"
+                            height="100px"
+                            width="100px"
+                            alt=""
+                          />
+                        </div>
+                        <div class="vertical-line"></div>
+                      </div>
+
+                      <div class="card-content">
+                        <div class="row card-content">
+                          <div>
+                            <div class="column">
+                              <div><strong><u>UNIVERSITY OF NEW HAVEN, U.S</u></strong></div>
+                              <div>GRADUATE TEACHING ASSISTANT</div>
+                              <div class="horizontal-line"></div>
+                              <div>	
+                                <ul1>		
+                                  <li1>Mentored students with their Assignments and Projects.</li>
+                                  <li1>Communicated with faculties and students on Canvas, Blackboard, Zoom, and Microsoft Teams.</li>
+                                  <li1>Conducted Polls and Review sessions on the Course, Topics, or Projects.</li>
+                                </ul1>	
+                                  </div>	
+                            </div>
+                          </div>
+                          <div>
+                            August 2021 - Present
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              
+
+              <div id="projects" class="notifier mt-10">
+                <div class="card vertical-center title-card">
+                  <span class="card-title">ACADEMIC PROJECTS </span>
+                </div>
+              </div>
+
+              <div class="grid2">
+                            
+                <div id="content1">
+                  <div class="projects mt-10">
+                    <section class="projects-section">
+                      <div class="card content-card">
+                        <div class="row">
+                          <div class="card-content">
+                            <div class="row card-content">
+                              <div>
+                                <div class="column">
+                                  <div><strong><u>System Monitor for Windows</u></strong></div>
+                                  <div id="registerbenefitspagecontent">	
+                                    <ul1>		
+                                      <li1>Developed a web application for windows for monitoring and profiling system resources such as Disk, CPU, Memory 
+                                        Utilization, Network Traffic, etc.</li>
+                                      <li1>Utilized Python library psutil to access and monitor system details and process utilities and implemented back-end API using 
+                                        python framework Django.</li>
+                                      <li1>Used GIT tomanage source code for Sprint Reviews.</li>
+                                    </ul1>	
+                                      </div>	
+                                </div>
+                              </div>
+                              <div>
+                                Spring 2021
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+    
+                </div>
+        
+                <div id="content2">
+                  <div class="card mt-10 content-card">
+                    <div class="row">
+                      
+                      <div class="card-content">
+                        <div class="row card-content">
+                          <div>
+                            <div class="column">
+                              <div><strong><u>CookBook Android Application</u></strong></div>
+                              <div id="registerbenefitspagecontent">	
+                                <ul1>		
+                                  <li1>Developed and built a fully functional kitchen reference recipe manager android application.</li>
+                                  <li1>Used Git to maintain version control of the application and for Sprint Reviews.</li>
+                                  <li1>Translated designs and wireframes into high quality code and ensured the best possible performance, quality, and 
+                                    responsiveness of the application.</li>
+                                </ul1>	
+                                  </div>	
+                            </div>
+                          </div>
+                          <div>
+                            Fall 2021
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="content3">
+                  <div class="card mt-10 content-card">
+                    <div class="row">
+                      
+                      <div class="card-content">
+                        <div class="row card-content">
+                          <div>
+                            <div class="column">
+                              <div><strong><u>Crawler and Search Engine</u></strong></div>
+                              <div id="registerbenefitspagecontent">	
+                                <ul1>		
+                                  <li1>Developed a web crawler and search engine for the University website using python library BeautifulSoup4 and python 
+                                    framework Flask.</li>
+                                  <li1>It was designed to act as filters for the information available on the University website allowing users to quickly and easily find 
+                                    information of their interest and value.</li>
+                                </ul1>	
+                                  </div>	
+                            </div>
+                          </div>
+                          <div>
+                            Fall 2021
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div id="skills" class="notifier mt-10">
+                <div class="card vertical-center title-card">
+                  <span class="card-title"> SKILLS </span> 
+                </div>
+              </div>
+
+              <div class="grid3">
+                     
+                <div class="card-content1">
+                  <div id="content1">
+                    <div><strong><u>Programming Languages</u></strong></div>
+                    <div>Python, C++, Java, Kotlin</div>
+                  </div>
+                </div>
+                
+                <div class="card-content1">
+                  <div id="content2">
+                      <div><strong><u>Databases and Operating Systems</u></strong></div>
+                      <div>MySQL, Firebase Firestore, Linux, iOS, Android</div>
+                  </div>
+                </div>
+
+                <div class="card-content1">
+                  <div id="content3">
+                    <div><strong><u>Tools and Technologies</u></strong></div>
+                    <div>Microsoft Visual Studio, Eclipse, Code::Blocks, Jupyter Notebook, PyCharm, MySQL Workbench, Hadoop, 
+                      Cisco Packet Tracer, Android Studio</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div id="contact" class="mt-10">
+                <div class="card">
+                  <div class="column horizontal-center contact-card">
+                    <div>
+                      <span class="card-title" style="color:white;">CONTACT INFORMATION</style></span>
+                    </div>
+
+                    <div class="row contact-details">
+                      
+                      <div title="phone">
+                        <a href="tel: +1 203 570 1722">
+                          <i class="fa-solid fa-phone"></i>
+                        </a>
+                      </div>
+                      <div title="e-mail">
+                        <a href="mailto: kdhan1@unh.newhaven.edu">
+                          <i class="fa-solid fa-envelope"></i>                         
+                      </div>
+                      
+                      <div title="facebook">
+                        <a
+                          href="https://www.facebook.com/KayDe2797/"
+                          target="_blank">
+                          <span class="fa fa-facebook"></span>
+                        </a> 
+                      </div>
+
+                      <div title="linkedIn">
+                        <a
+                          href="https://www.linkedin.com/in/kunaldhanaitkar/"
+                          target="_blank">
+                          <span class="fa-brands fa-linkedin-in"></span>
+                        </a>
+                      </div>
+
+                      <div title="github">
+                        <a
+                          href="https://www.github.com/KunalDhanaitkar/"
+                          target="_blank">
+                          <span class="fa-brands fa-github"></span>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </main>
+        
+        </div>
+      </div>
+    </div>
+  </body>
+  
+</html>
